@@ -1,0 +1,143 @@
+@import url('./color.css');
+
+.body_container{
+    width: 100%;
+    height: fit-content;
+    background-color: var(--background-color);
+
+}
+
+header{
+    display: flex;
+    justify-content: center;
+}
+
+.headercontainer{
+    margin: 30px 0;
+}
+
+
+.point{
+    width: 150px;
+    height: 5px;
+    background-color: var(--point);
+}
+
+.logo{
+    margin-top: 15px;
+    text-align: center;
+}
+
+.logo > strong{
+    margin-top: 10px;
+    display: block;
+    font-size: 24px;
+    color: var(--font);
+    letter-spacing: -0.02em;
+    text-shadow: -2px 4px 0.2em #000000;
+}   
+
+
+/*content들 style */ 
+
+.mypageContainer{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.contentContainer{
+    padding: 35px;
+    padding-top: 10px;
+    width: 80%;
+    height: fit-content;
+}
+/*my page 버튼들 */ 
+.menulist button{
+    width: fit-content;
+    height: fit-content;
+    padding: 5px;
+    font-size: 16px;
+    color: #fff;
+    background-color: var(--background-color);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    margin-right: 8px;
+}
+
+.menulist button:hover{
+    background-color: var(--point);
+}
+
+/*나의 정보 content */
+
+.myinfoContainer{
+    width: 100%;
+    height: fit-content;
+    padding: 20px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.myinfo{
+    margin-left: 30px;
+}
+.myinfotitle{
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 18px;
+}
+.myinfoForm div{
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+}
+.myinfoForm label{
+    color: #fff;
+    font-size: 16px;
+    margin-right: 40px;
+}
+.myinfoForm p {
+    width: 100px;
+    border-bottom: 1px solid var(--border);
+}
+
+
+.changeMYINFO{
+    background-color: var(--background-color);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    font-size: 16px;
+    color: #fff;
+}
+.changeMYINFO:hover{
+    background-color: var(--point);
+}
+
+/*review Container */ 
+.myreviewContainer{
+    width: 100%;
+    height: fit-content;
+    padding: 20px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.likemoiveContainer{
+    width: 100%;
+    height: fit-content;
+    padding: 20px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.likemoiveContainer {
+    width: 100%;
+    height: fit-content;
+    padding: 20px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    margin-top: 10px;
+}

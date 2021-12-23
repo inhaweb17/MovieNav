@@ -1,0 +1,64 @@
+@font-face {
+  font-family: 'movie';
+  src:
+    url('/my/src/main/webapp/resources/fonts/movie.ttf') format('truetype'),
+    url('/my/src/main/webapp/resources/fonts/movie.woff') format('woff'),
+    url('/my/src/main/webapp/resources/fonts/movie.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+i {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'movie' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ic-star-empty:before {
+  content: "\e908";
+}
+.ic-star-full:before {
+  content: "\e909";
+}
+.ic-star-half:before {
+  content: "\e90a";
+}
+.ic-genre_movie:before {
+  content: "\e900";
+}
+.ic-now_movie:before {
+  content: "\e901";
+}
+.ic-right_btn_new:before {
+  content: "\e902";
+}
+.ic-watcher:before {
+  content: "\e904";
+}
+.ic-left_btn_new:before {
+  content: "\e905";
+}
+.ic-caret:before {
+  content: "\e903";
+}
+.ic-chevron:before {
+  content: "\e906";
+}
+.ic-close:before {
+  content: "\e907";
+}
+.ic-search:before {
+  content: "\e90d";
+}
+.ic-heart:before {
+  content: "\e9da";
+}

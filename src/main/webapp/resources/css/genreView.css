@@ -1,0 +1,86 @@
+@import url(color.css);
+
+.body_container{
+    width: 100%;
+    background-color: var(--background-color);
+    height: fit-content;
+
+}
+
+.genreContainer{
+    display: flex;
+    flex-direction: row;
+}
+
+/*header 부분 */ 
+
+header{
+    padding: 20px;
+    padding-left: 60px;
+    display: flex;
+    flex-direction: row;
+}
+.point{
+    width: 8px;
+    height: 100px;
+    background-color: var(--point);
+}
+
+.logo{
+    font-size: 24px;
+    margin-left: 40px;
+}
+
+.logo > strong{
+    margin-top: 10px;
+    display: block;
+    font-size: 24px;
+    color: var(--font);
+    letter-spacing: -0.02em;
+    text-shadow: -2px 4px 0.2em #000000;
+}   
+
+.title{
+    font-size: 20px;
+    color: #fff;
+    margin-top: 50px;
+    margin-left: 50px;
+}
+
+/*카테고리 */ 
+.genre_indexContainer{
+    padding-bottom: 100px;
+}
+.genre_index{
+    border: 2px solid var(--border);
+    width: fit-content;
+    margin-left: 60px;
+    margin-top: 40px;
+    border-radius: 10px;
+}
+
+.genre_index p{
+    padding: 20px;
+    color: #fff;
+    font-size: 18px;
+}
+
+.genre_index p:hover{
+    text-decoration: underline;
+    color: var(--point);
+}
+
+/*영화 포스터 검색 결과들 */
+
+.resultContainer{
+    margin: 20px;
+    margin-top:40px;
+}
+
+.movieResult{
+    border: 2px solid var(--border);
+    width: 70%;
+    height: fit-content;
+    padding: 30px;
+    border-radius: 10px;
+}

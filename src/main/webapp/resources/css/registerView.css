@@ -1,0 +1,120 @@
+@import url(color.css);
+
+.body_container{
+    width: 100%;
+    top: 0;
+    position: absolute;
+    height: 800px;
+    background-color: var(--background-color);
+}
+
+/*헤더 부분 */
+header{
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+@keyframes pointAni{
+    0% {height: 50px; background-color: #3D087B;}
+    100%{height: 100px; background-color: var(--point);}
+}
+.point{
+    width: 6px;
+    background-color: var(--point);
+    animation: pointAni 1.5s forwards;
+}
+
+.logo{
+    margin-left: 15px;
+}
+
+.logo > strong{
+    margin-top: 10px;
+    display: block;
+    font-size: 25px;
+    color: var(--font);
+    letter-spacing: -0.02em;
+    text-shadow: -2px 4px 0.2em #000000;
+}  
+
+.title{
+    color: #fff;
+    font-size: 25px;
+    margin-top: 50px;
+    margin-left: 20px;
+    text-shadow: -2px 4px 0.2em #000000;
+}
+
+/*회원가입 폼 부분*/
+
+.JoinForm{
+    position: absolute;
+    left: 20px;
+    top: 200px;
+    padding-left: 25px;
+    border-left: 6px solid var(--point);
+}
+
+.JoinForm div{
+    padding: 15px;
+    color: #fff;
+    font-size: 20px;
+}
+
+.JoinForm input{
+    margin-left: 30px;
+    background-color: var(--background-color);
+    border-style: none;
+    border-bottom: 2px solid var(--border);
+}
+
+.namelabel{
+    margin-right: 100px;
+}
+
+.idlabel{
+    margin-right: 80px;
+}
+.confirm{
+    background-color: var(--background-color);
+    color: #fff;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    margin-left: 15px;
+}
+
+.confirm:hover{
+    background-color: var(--point);
+}
+.pwdlabel{
+    margin-right: 60px;
+}
+
+.emaillabel{
+    margin-right: 78px;
+}
+
+.tellabel{
+    margin-right: 58px;
+}
+
+.datelabel{
+    margin-right: 60px;
+}
+
+.user_date{
+    color: var(--border);
+}
+
+.submit_btn{
+    background-color: var(--background-color);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    color : #fff;
+    margin-left: 500px;
+    font-size: 20px;
+}
+.submit_btn:hover{
+    background-color: var(--point);
+}
