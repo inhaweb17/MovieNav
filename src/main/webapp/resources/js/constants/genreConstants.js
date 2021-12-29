@@ -1,0 +1,1 @@
+export const GENRELIST = ['action', 'comedy', 'melo','drama', 'history','mystery','fantasy','sf','crime','horror'];
