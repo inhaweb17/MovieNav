@@ -28,8 +28,6 @@ const reqRank =
    .then(res=> {
        let rankList = res.boxOfficeResult.dailyBoxOfficeList;
        let posterList = poster.split(',');
-       console.log(rankList);
-       console.log(posterList);
        showRanking(rankList, posterList);
    })
 
