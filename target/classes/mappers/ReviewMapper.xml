@@ -8,8 +8,8 @@
 <mapper namespace="com.project.my.ReviewMapper">
 
 	<insert id="insertReview" parameterType="ReviewDto">
-		INSERT INTO review (reviewContent, reviewDate, reviewCount, userId, movieIdx)
-		VALUES (#{reviewContent}, #{reviewDate}, #{reviewCount}, #{userId}, #{movieIdx})
+		INSERT INTO review (reviewContent, reviewDate, reviewCount, r_userId, r_movieIdx)
+		VALUES (#{reviewContent}, #{reviewDate}, #{reviewCount}, #{r_userId}, #{r_movieIdx})
 	</insert>
 	
 	<update id="updateReview" parameterType="ReviewDto">
@@ -39,13 +39,13 @@
 	<select id="selectByFilm" parameterType="int" resultType="ReviewDto">
 		SELECT * 
 		FROM review 
-		WHERE movieIdx=#{movieIdx}
+		WHERE r_movieIdx=#{r_movieIdx}
 	</select>
 	
 	<select id="selectByUserId" parameterType="String"  resultType="ReviewDto">
 		SELECT * 
 		FROM review 
-		WHERE userId=#{userId}
+		WHERE r_userId=#{r_userId}
 	</select>
 	
 	<select id="selectAll" resultType="ReviewDto">

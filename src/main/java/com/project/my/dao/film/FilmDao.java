@@ -6,7 +6,7 @@ import org.springframework.stereotype.Repository;
 
 import com.project.my.dto.FilmDto;
 
-@Repository("FilmDao")
+@Repository
 public class FilmDao implements IFilmDao {
 
 	private static final String namespace = "com.project.my.FilmMapper";
