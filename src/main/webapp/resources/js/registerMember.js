@@ -1,7 +1,7 @@
 import checkIdInputValid from "./modules/checkIdInputValid.js";
 import showAlert from "./modules/showAlert.js";
 import {DUPLICATE_ID_ERROR, ERRORMSG} from "./constants/errorMsg.js";
-import checkUserFormInputValid from "./modules/checkUserFormInputValid";
+import checkUserFormInputValid from "./modules/checkUserFormInputValid.js";
 
 export default function registerMember(){
 	this.idValid = false;

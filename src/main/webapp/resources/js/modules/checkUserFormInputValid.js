@@ -1,4 +1,4 @@
-import {NAME_EMPTY_ERROR, EMAIL_EMPTY_ERROR, TEL_EMPTY_ERROR,DATE_EMPTY_ERROR,  ERRORMSG} from "./constants/errorMsg.js";
+import {NAME_EMPTY_ERROR, EMAIL_EMPTY_ERROR, TEL_EMPTY_ERROR,DATE_EMPTY_ERROR,  ERRORMSG} from "../constants/errorMsg.js";
 import showAlert from "./showAlert.js";
 
 export default function checkUserFormInputValid(){

@@ -27,9 +27,9 @@ public class UserController {
 	UserService service;
 	
 	//아이디 중복체크
-	@RequestMapping(value = "/idCheck", method = RequestMethod.POST)
+	@RequestMapping(value = "/idCheck", method = RequestMethod.GET)
 	public void idCheck(Model model, @RequestParam("userId") String userId) throws Exception {
-		logger.info("post idCheck");
+		logger.info("get idCheck");
 		
 		//String userId = request.getParameter("userId");
 			
@@ -41,6 +41,14 @@ public class UserController {
 		else {
 			model.addAttribute("message", "success");
 		}
+	}
+	
+	//회원가입 화면
+	@RequestMapping(value = "/register", method = RequestMethod.GET)
+	public String register() throws Exception {
+		logger.info("get register");
+		
+		return "registerView";
 	}
 	
 	//회원가입 처리
