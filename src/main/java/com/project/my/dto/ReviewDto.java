@@ -6,8 +6,8 @@ public class ReviewDto {
 	private String reviewContent;
 	private String reviewDate;
 	private int reviewCount;
-	private String userId;
-	private int movieIdx;
+	private String r_userId;
+	private int r_movieIdx;
 	
 	public int getReviewIdx() {
 		return reviewIdx;
@@ -41,26 +41,20 @@ public class ReviewDto {
 		this.reviewCount = reviewCount;
 	}
 	
-	public String getUserId() {
-		return userId;
+	public String getR_userId() {
+		return r_userId;
 	}
-	
-	public void setUserIdx(String userId) {
-		this.userId = userId;
+
+	public void setR_userId(String r_userId) {
+		this.r_userId = r_userId;
 	}
-	
-	public int getMovieIdx() {
-		return movieIdx;
+
+	public int getR_movieIdx() {
+		return r_movieIdx;
 	}
-	
-	public void setMovieIdx(int movieIdx) {
-		this.movieIdx = movieIdx;
+
+	public void setR_movieIdx(int r_movieIdx) {
+		this.r_movieIdx = r_movieIdx;
 	}
-	
-	@Override
-	public String toString() {
-		
-		return "ReviewDto [reviewIdx=" + reviewIdx + ", reviewContent=" + reviewContent + ", reviewDate=" + reviewDate + 
-				", reviewCount=" + reviewCount + ", userId=" + userId + ", movieIdx=" + movieIdx + "]";
-	}
+
 }

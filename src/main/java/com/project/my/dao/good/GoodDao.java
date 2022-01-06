@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 
 import com.project.my.dto.GoodDto;
 
-@Repository("GoodDao")
+@Repository
 public class GoodDao implements IGoodDao {
 	
 	private static final String namespace = "com.project.my.GoodMapper";
@@ -17,9 +17,9 @@ public class GoodDao implements IGoodDao {
 	private SqlSession sqlSession;
 
 	@Override
-	public List<String> selectByUserId(String userId) throws Exception {
+	public List<String> selectByUserId(String g_userId) throws Exception {
 
-		return sqlSession.selectList(namespace + ".selectByUserId", userId);
+		return sqlSession.selectList(namespace + ".selectByUserId", g_userId);
 	}
 
 	@Override

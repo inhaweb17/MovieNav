@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 
 import com.project.my.dto.ReviewDto;
 
-@Repository("ReviewDao")
+@Repository
 public class ReviewDao implements IReviewDao {
 	
 	private static final String namespace = "com.project.my.ReviewMapper";
@@ -48,15 +48,15 @@ public class ReviewDao implements IReviewDao {
 	}
 
 	@Override
-	public List<ReviewDto> selectByFilm(int movieIdx) throws Exception {
+	public List<ReviewDto> selectByFilm(int r_movieIdx) throws Exception {
 
-		return sqlSession.selectList(namespace + ".selectByFilm", movieIdx);
+		return sqlSession.selectList(namespace + ".selectByFilm", r_movieIdx);
 	}
 
 	@Override
-	public List<ReviewDto> selectByUserId(String userId) throws Exception {
+	public List<ReviewDto> selectByUserId(String r_userId) throws Exception {
 
-		return sqlSession.selectList(namespace + ".selectByUserId", userId);
+		return sqlSession.selectList(namespace + ".selectByUserId", r_userId);
 	}
 
 	@Override

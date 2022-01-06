@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 
 import com.project.my.dto.UserDto;
 
-@Repository("UserDao")
+@Repository
 public class UserDao implements IUserDao {
 	
 	private static final String namespace = "com.project.my.UserMapper";
