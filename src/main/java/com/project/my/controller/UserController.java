@@ -28,10 +28,8 @@ public class UserController {
 	
 	//아이디 중복체크
 	@RequestMapping(value = "/idCheck", method = RequestMethod.GET)
-	public void idCheck(Model model, @RequestParam("userId") String userId) throws Exception {
+	public String idCheck(Model model, @RequestParam("userId") String userId) throws Exception {
 		logger.info("get idCheck");
-		
-		//String userId = request.getParameter("userId");
 			
 		int result = service.idCheck(userId);
 			
@@ -41,6 +39,8 @@ public class UserController {
 		else {
 			model.addAttribute("message", "success");
 		}
+		
+		return "registerView";
 	}
 	
 	//회원가입 화면
