@@ -43,6 +43,14 @@ public class UserController {
 		}
 	}
 	
+	//회원가입 화면
+	@RequestMapping(value = "/register", method = RequestMethod.GET)
+	public String register() throws Exception {
+		logger.info("get register");
+		
+		return "registerView";
+	}
+	
 	//회원가입 처리
 	@RequestMapping(value = "/register", method = RequestMethod.POST)
 	public String register(UserDto user) throws Exception {
