@@ -8,7 +8,9 @@
 <configuration>
 	<typeAliases>
 		<typeAlias alias="UserDto" type="com.project.my.dto.UserDto"/>
+		<typeAlias alias="FilmDto" type="com.project.my.dto.FilmDto"/>
+		<typeAlias alias="ReviewDto" type="com.project.my.dto.ReviewDto"/>
+		<typeAlias alias="GoodDto" type="com.project.my.dto.GoodDto"/>
 	</typeAliases>
-	
- 
+
 </configuration>

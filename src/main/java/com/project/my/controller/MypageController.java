@@ -138,7 +138,7 @@ public class MypageController {
 		logger.info("post modifyReview");
 		
 		String userId = (String) httpSession.getAttribute("userId");
-		review.setUserIdx(userId);
+		review.setR_userId(userId);
 		
 		reviewService.modifyReview(review);
 		
