@@ -7,6 +7,6 @@ export default function checkIdDuplicate(userId){
 //	
 //	
 //	
-	location.href=`user/idCheck?id=${userId}`;
+	location.href=`user/idCheck?userId=${userId}`;
 	
 }
