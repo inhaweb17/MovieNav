@@ -43,7 +43,7 @@
                 <div class="idForm">
                     <label for="user_id" class="idlabel">아이디</label>
                     <input type="text" class="user_id" id="user_id" name="userId" placeholder="아이디">
-                    <button class="confirm" onclick="location='user/idCheck'">중복확인</button>
+                    <button class="checkIdValidBtn" type="button">중복확인</button>
                 </div>
 
                 <div class="pwdForm">
@@ -71,5 +71,6 @@
         </section>
     </article>
 </div>
+	<script type="module" src="${pageContext.request.contextPath}/resources/js/registerMember.js"></script>
 </body>
 </html>

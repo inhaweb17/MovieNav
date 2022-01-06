@@ -35,16 +35,16 @@
         <section class="genre_indexContainer">
             
             <div class="genre_index">
-                <p class="action">#액션</p>
-                <p class="comedy">#코미디</p>
-                <p class="melo">#멜로</p>
-                <p class="drama">#드라마</p>
-                <p class="history">#사극</p>
-                <p class="mystery">#미스터리</p>
-                <p class="fantasy">#판타지</p>
-                <p class="sf">#SF</p>
-                <p class="crime">#범죄</p>
-                <p class="horror">#공포</p>
+                <p id="genre-btn" class="action">#액션</p>
+                <p id="genre-btn" class="comedy">#코미디</p>
+                <p id="genre-btn" class="melo">#멜로</p>
+                <p id="genre-btn" class="drama">#드라마</p>
+                <p id="genre-btn" class="history">#사극</p>
+                <p id="genre-btn" class="mystery">#미스터리</p>
+                <p id="genre-btn" class="fantasy">#판타지</p>
+                <p id="genre-btn" class="sf">#SF</p>
+                <p id="genre-btn" class="crime">#범죄</p>
+                <p id="genre-btn" class="horror">#공포</p>
             </div>
         </section>
 
@@ -56,5 +56,6 @@
         </section>
     </artilce>
 </div>
+<script type="module" src="${pageContext.request.contextPath}/resources/js/genreView.js"></script>
 </body>
 </html>
