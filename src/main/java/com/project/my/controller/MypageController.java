@@ -1,5 +1,7 @@
 package com.project.my.controller;
 
+import java.util.List;
+
 import javax.servlet.http.HttpSession;
 
 import org.slf4j.Logger;
@@ -11,19 +13,26 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.project.my.dto.ReviewDto;
 import com.project.my.dto.UserDto;
+import com.project.my.service.good.GoodService;
+import com.project.my.service.review.ReviewService;
 import com.project.my.service.user.UserService;
 
 @Controller
 @RequestMapping("/mypage")
 public class MypageController {
 	
-	private static final Logger logger = LoggerFactory.getLogger(UserController.class);
+	private static final Logger logger = LoggerFactory.getLogger(MypageController.class);
 	
 	@Autowired
 	UserService userService;
+	@Autowired
+	ReviewService reviewService;
+	@Autowired
+	GoodService goodService;
 	
-	//myinfo 화면
+	// myinfo 화면
 	@RequestMapping(value = "/myinfo", method = RequestMethod.POST)
 	public String myinfo(HttpSession httpSession, Model model) throws Exception {
 		logger.info("post myinfo");
@@ -36,13 +45,13 @@ public class MypageController {
 		return "myinfo";
 	}
 	
-	//myinfo수정 화면
+	// myinfo수정 화면
 	@RequestMapping(value = "/modify", method = RequestMethod.GET)
 	public void modify() throws Exception {
 		logger.info("get modify");
 	}
 	
-	//myinfo수정 처리
+	// myinfo수정 처리
 	@RequestMapping(value = "/modify", method = RequestMethod.POST) 
 	public String modify(HttpSession httpSession, UserDto user) throws Exception {
 		logger.info("post modify");
@@ -55,13 +64,13 @@ public class MypageController {
 		return "myinfo";
 	}
 	
-	//pw수정 화면
+	// pw수정 화면
 	@RequestMapping(value = "/modifyPw", method = RequestMethod.GET)
 	public void modifyPw() throws Exception {
 		logger.info("get modifyPw");
 	}
 	
-	//pw수정 처리
+	// pw수정 처리
 	@RequestMapping(value = "/modifyPw", method = RequestMethod.POST)
 	public String modifyPw(@RequestParam("pw") String pw, @RequestParam("newpw") String newpw, HttpSession  httpSession, Model model) throws Exception {
 		logger.info("post modfiyPw");
@@ -87,5 +96,64 @@ public class MypageController {
 		
 		return "redirect:/";
 		
+	}
+	
+	// 내가 작성한 리뷰리스트
+	@RequestMapping(value = "/reviewList", method = RequestMethod.POST)
+	public String reviewList(HttpSession httpSession, Model model) throws Exception {
+		logger.info("post reviewList");
+		
+		String userId = (String) httpSession.getAttribute("userId");
+		
+		List<ReviewDto> reviewlist = reviewService.selectByUserId(userId); 
+		
+		model.addAttribute("reviewlist", reviewlist);
+		
+		return "redirect:/";
+	}
+	
+	// 리뷰삭제 처리
+	@RequestMapping(value = "/deleteReview", method = RequestMethod.POST)
+	public String deleteReview(HttpSession httpSession, ReviewDto review, Model model) throws Exception {
+		logger.info("post deleteReview");
+		
+		//삭제
+		reviewService.deleteReview(review.getReviewIdx());
+		
+		//결과리스트 넘기기
+		String userId = (String) httpSession.getAttribute("userId");
+		
+		List<ReviewDto> reviewlist = reviewService.selectByUserId(userId); 
+		
+		model.addAttribute("reviewlist", reviewlist);	
+		
+		return "redirect:/";
+	}
+	
+	// 리뷰수정 화면
+	
+	// 리뷰수정 처리
+	@RequestMapping(value = "/modifyReview", method = RequestMethod.POST)
+	public String modifyReview(HttpSession httpSession, ReviewDto review) throws Exception {
+		logger.info("post modifyReview");
+		
+		String userId = (String) httpSession.getAttribute("userId");
+		review.setUserIdx(userId);
+		
+		reviewService.modifyReview(review);
+		
+		return "redirect:/";
+	}
+	
+	// 영화찜목록 처리
+	@RequestMapping(value = "/filmList", method = RequestMethod.POST)
+	public void filmList(HttpSession httpSession, Model model) throws Exception {
+		logger.info("post filmList");
+		
+		String userId = (String) httpSession.getAttribute("userId");
+		
+		List<String> filmlist = goodService.selectByUserId(userId);
+		
+		model.addAttribute("filmlist", filmlist);
 	}
 }
