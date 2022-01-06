@@ -27,9 +27,9 @@ public class UserController {
 	UserService service;
 	
 	//아이디 중복체크
-	@RequestMapping(value = "/idCheck", method = RequestMethod.POST)
+	@RequestMapping(value = "/idCheck", method = RequestMethod.GET)
 	public void idCheck(Model model, @RequestParam("userId") String userId) throws Exception {
-		logger.info("post idCheck");
+		logger.info("get idCheck");
 		
 		//String userId = request.getParameter("userId");
 			
