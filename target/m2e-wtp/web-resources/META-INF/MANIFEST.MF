@@ -1,10 +1,5 @@
 Manifest-Version: 1.0
-<<<<<<< HEAD
 Built-By: JASUN
 Build-Jdk: 13
-=======
-Built-By: soohy
-Build-Jdk: 11.0.13
->>>>>>> 872b511fd01a9407942912c96ed1d7b9567617e8
 Created-By: Maven Integration for Eclipse
 

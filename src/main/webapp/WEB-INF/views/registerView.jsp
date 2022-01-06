@@ -71,11 +71,10 @@
         </section>
     </article>
 </div>
-	
+	<%
+		String message = request.getAttribute("message");
+                    		
+	%>
 	<script type="module" src="${pageContext.request.contextPath}/resources/js/registerMember.js"></script>
-	<script>
-		const message = "${message}";
-		console.log(message);
-	</script>
 </body>
 </html>
