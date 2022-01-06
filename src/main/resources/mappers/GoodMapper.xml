@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+ 
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ 
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+<mapper namespace="com.project.my.GoodMapper">
+	
+	<select id="selectByUserId" parameterType="String"  resultType="String">
+		SELECT g_title
+		FROM good 
+		WHERE g_userId=#{g_userId}
+	</select>
+	
+	<insert id="insertGood" parameterType="GoodDto">
+		INSERT INTO good (goodIdx, g_userId, g_title)
+		VALUES (#{goodIdx}, #{g_userId}, #{g_title})
+	</insert>
+	
+	<delete id="deleteGood" parameterType="GoodDto">
+		DELETE
+		FROM good
+		WHERE goodIdx=#{goodIdx}
+	</delete>
+	
+	<select id="selectGood" parameterType="GoodDto"  resultType="GoodDto">
+		SELECT *
+		FROM good 
+		WHERE goodIdx=#{goodIdx}
+	</select>
+</mapper>

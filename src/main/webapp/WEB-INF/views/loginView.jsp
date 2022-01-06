@@ -54,7 +54,7 @@
 
         <section class="linkForm">
             <div class="memberJoinLink">
-                <a href="registerView">회원가입</a>
+                <a href="user/register">회원가입</a>
             </div>
             <div class="idpwFindLink">
                 <a href="user/findIdPw">아이디/비밀번호 찾기</a>
