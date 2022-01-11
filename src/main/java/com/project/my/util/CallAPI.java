@@ -9,7 +9,9 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -25,6 +27,7 @@ public class CallAPI {
 	private String clientSecret = "aRH8FyN82I";
 	
 	private List<String> titleList = null;
+	private Map<String, List<FilmDto>> genreList = null;
 	
 	// 일별박스오피스 api 호출
 	public List<String> callBoxOfiice() {
@@ -569,5 +572,28 @@ public class CallAPI {
 		
 		
 		return boxofficePoster;
+	}
+	
+	public Map<String,List<FilmDto>> getGenreList() {
+		genreList = new HashMap<String, List<FilmDto>>();
+		
+		genreList.put("1", null);
+		genreList.put("2", null);
+		genreList.put("4", null);
+		genreList.put("5", null);
+		genreList.put("6", null);
+		genreList.put("7", null);
+		genreList.put("10", null);
+		genreList.put("11", null);
+		genreList.put("12", null);
+		genreList.put("13", null);
+		genreList.put("14", null);
+		genreList.put("15", null);
+		genreList.put("16", null);
+		genreList.put("17", null);
+		genreList.put("18", null);
+		genreList.put("19", null);
+		
+		return genreList;
 	}
 }
