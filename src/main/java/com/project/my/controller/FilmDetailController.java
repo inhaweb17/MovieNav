@@ -36,6 +36,14 @@ public class FilmDetailController {
 	
 	CallAPI api = new CallAPI();
 	
+	//영화상세정보 화면
+	@RequestMapping(value = "/filmDetailView", method = RequestMethod.GET)
+	public String filmDetailView() throws Exception {
+		logger.info("get filmDetailView");
+		
+		return "movieDetailView";
+	}
+	
 	// 영화상세정보 처리
 	@RequestMapping(value = "/getDetail", method = RequestMethod.POST)
 	public String getDetail(@RequestParam("title") String title, HttpSession httpSession, Model model) throws Exception {

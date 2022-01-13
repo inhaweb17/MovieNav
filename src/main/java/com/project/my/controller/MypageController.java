@@ -30,16 +30,16 @@ public class MypageController {
 	@Autowired GoodService goodService;
 	
 	// myinfo 화면
-	@RequestMapping(value = "/myinfo", method = RequestMethod.POST)
+	@RequestMapping(value = "/myinfo", method = RequestMethod.GET)
 	public String myinfo(HttpSession httpSession, Model model) throws Exception {
-		logger.info("post myinfo");
+		logger.info("get myinfo");
 		
 		String userId = (String) httpSession.getAttribute("userId");
 		UserDto user = userService.selectUser(userId);
 		
 		model.addAttribute("user", user);
 		
-		return "myinfo";
+		return "myPageView";
 	}
 	
 	// myinfo수정 화면
