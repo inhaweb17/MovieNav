@@ -103,6 +103,7 @@ public class HomeController {
 		return "genreView";
 	}
 
+<<<<<<< HEAD
 	//임시 테스트 코드
 	
 	//영화상세보기
@@ -120,6 +121,8 @@ public class HomeController {
 			
 			return "myPageView";
 		}
+=======
+>>>>>>> 749a85c102b30c16c3a4daf9dd76d89cbb2bec0e
 	// 검색결과 화면
 	@RequestMapping(value = "/searchView", method = RequestMethod.GET)
 	public String searchView(@RequestParam("search") String search, Model model) throws Exception {
