@@ -5,7 +5,7 @@ export default function checkIdDuplicate(userId){
 //	xhr.open(method, 'my/register/user',true);
 //	xhr.send(`/idCheck?id=${userId}`);
 //	
-//	
+//	message = "${message}";
 //	
 	location.href=`user/idCheck?userId=${userId}`;
 	

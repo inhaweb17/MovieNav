@@ -14,7 +14,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/reset.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/fonts.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/font.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/home.css">
     
 </head>
@@ -42,7 +42,7 @@
                    <button class="user in btn" type="button" onclick="location='register'">
                        회원가입 
                    </button>
-                   <button class="mypage" type="button">
+                   <button class="mypage" type="button" onclick="location='myPageView'">
                        mypage
                    </button>
                </div>
@@ -102,7 +102,7 @@
                         <a href="readyMovie" alt="개봉예정작">#개봉예정작</a>
                     </div>
                 </div>
-
+				<a href="movieDetailView" alt="영화상세보기">#영화상세보기</a>
                 <div class="genremovie">
                     <i class="ic-genre_movie"></i>
                     <div class="genremovie-link">
