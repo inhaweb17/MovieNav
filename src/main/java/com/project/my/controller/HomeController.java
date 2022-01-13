@@ -78,4 +78,22 @@ public class HomeController {
 		
 		return "genreView";
 	}
+	
+	//임시 테스트 코드
+	
+	//영화상세보기
+	@RequestMapping(value = "/movieDetailView", method = RequestMethod.GET)
+	public String movieDetailView() throws Exception {
+		logger.info("get movieDetailView");
+		
+		return "movieDetailView";
+	}
+	//마이페이지
+	
+		@RequestMapping(value = "/myPageView", method = RequestMethod.GET)
+		public String myPageView() throws Exception {
+			logger.info("get myPageView");
+			
+			return "myPageView";
+		}
 }
