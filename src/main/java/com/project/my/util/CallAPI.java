@@ -357,18 +357,35 @@ public class CallAPI {
 			JSONObject jsonObject = (JSONObject) jsonParser.parse(results);
 			JSONArray item = (JSONArray) jsonObject.get("items");
 			
-			for(int i=0; i<10; i++) {
-				JSONObject entity = (JSONObject) item.get(i);
-				
-				String title = entity.get("title").toString();
-				String movieGrade = entity.get("userRating").toString();
-				
-				FilmDto film = new FilmDto();
-				film.setTitle(title);
-				film.setMovieGrade(movieGrade);
-				
-				filmlist.add(film);
-			}
+//			for(int i=0; i<10; i++) {
+//				JSONObject entity = (JSONObject) item.get(i);
+//				
+//				String title = entity.get("title").toString();
+//				int movieGrade = (int) entity.get("userRating");
+//				
+//				System.out.println("title=" + title);
+//				System.out.println("movieGrade=" + movieGrade);
+//				
+//				FilmDto film = new FilmDto();
+//				film.setTitle(title);
+//				film.setMovieGrade(movieGrade);
+//				
+//				filmlist.add(film);
+//			}
+			
+			JSONObject entity = (JSONObject) item.get(0);
+			
+			String title = entity.get("title").toString();
+			int movieGrade = (int) entity.get("userRating");
+			
+			System.out.println("title=" + title);
+			System.out.println("movieGrade=" + movieGrade);
+			
+			FilmDto film = new FilmDto();
+			film.setTitle(title);
+			film.setMovieGrade(movieGrade);
+			
+			filmlist.add(film);
 			
 		} catch(Exception e) {
 			e.printStackTrace();

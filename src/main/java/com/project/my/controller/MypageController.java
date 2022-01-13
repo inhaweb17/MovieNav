@@ -25,12 +25,9 @@ public class MypageController {
 	
 	private static final Logger logger = LoggerFactory.getLogger(MypageController.class);
 	
-	@Autowired
-	UserService userService;
-	@Autowired
-	ReviewService reviewService;
-	@Autowired
-	GoodService goodService;
+	@Autowired UserService userService;
+	@Autowired ReviewService reviewService;
+	@Autowired GoodService goodService;
 	
 	// myinfo È­¸é
 	@RequestMapping(value = "/myinfo", method = RequestMethod.POST)

@@ -4,7 +4,7 @@ public class FilmDto {
 	
 	private int movieIdx;
 	private String title;
-	private String movieGrade;
+	private int movieGrade;
 	private float averGrade;
 	private int totalGrade;
 	private int userCount;
@@ -33,11 +33,11 @@ public class FilmDto {
 		this.title = title;
 	}
 	
-	public String getMovieGrade() {
+	public int getMovieGrade() {
 		return movieGrade;
 	}
 	
-	public void setMovieGrade(String movieGrade) {
+	public void setMovieGrade(int movieGrade) {
 		this.movieGrade = movieGrade;
 	}
 	
