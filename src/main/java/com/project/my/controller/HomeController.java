@@ -27,8 +27,7 @@ public class HomeController {
 	
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 	
-	@Autowired
-	ReviewService reviewService;
+	@Autowired ReviewService reviewService;
 	
 	CallAPI api = new CallAPI();
 	
