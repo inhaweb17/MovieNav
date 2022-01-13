@@ -16,7 +16,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/reset.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/fonts.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/font.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/findIdPwView.css">
 </head>
 <body>
