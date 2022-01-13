@@ -1,0 +1,206 @@
+@import url(color.css);
+
+
+.body_container{
+    width: 100%;
+    height: 800px;
+    background-color: var(--background-color);
+}
+strong{
+    font-size: 50px;
+    color: #ffffff;
+    margin: 10px;
+}
+
+/*배치 관련 */
+.container{
+    border: 3px solid var(--puple-color);
+    border-radius: 10px;
+    margin: 30px;
+    width: 95%;
+    height:fit-content;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;    
+}
+/*영화상세정보배치*/ 
+.movieContainer{
+    display: grid;
+    grid-template-columns: 20px 300px 1000px;
+    grid-template-rows: 300px 50px 150px;
+}
+
+.mposter{
+    grid-column: 2 / 3;
+}
+.movieInfoContainer{
+    grid-column: 3 / 4;
+    padding: 20px;
+    margin-top: 10px;
+}
+.movieInfoContainer table tr td{
+    color:#fff;
+}
+.mposter img{
+    width: auto;
+    height: auto;
+    max-width: 200px;
+    padding: 20px;
+}
+.movieInfo{
+    border: 1px solid var(--puple-color);
+    border-radius: 5px;
+    width: 40%;
+}
+.plot {
+    width: 650px;
+    word-wrap: break-word;
+}
+
+
+/*gradeInfo 관련*/
+.gradeInfo{
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+    display: inline-flex;    
+}
+.grade{
+    display: inline-flex;
+    padding : 10px;
+}
+.like{
+    display: inline-flex;
+    padding: 10px;
+}
+.grade p{
+    color:#fff;
+    font-size: 20px;
+    margin-left: 15px;
+}
+.like p {
+    color: #fff;
+    font-size: 20px;
+    margin-left: 15px;
+}
+.grade img{
+    width: auto;
+    height: auto;
+    max-width: 50px;
+    max-height: 50px;
+}
+.like img{
+    width: auto;
+    height: auto;
+    max-width: 50px;
+    max-height: 50px;
+}
+
+
+/*별점 관련 */ 
+.starGrade{
+    grid-column: 3 /4;
+    grid-row: 3 / 4;
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+}
+.stars{
+    width: 260px;
+    height: 50px;
+    border: 1px solid #fff;
+    border-radius: 10px;
+}
+.stars .star{
+    width: 48px;
+    height: 48px;
+    padding: 2px;
+    display: inline-block;
+}
+
+.star.empty{
+    background: url("../img/star-empty.svg") no-repeat;
+}
+.star.half{
+    background: url('../img/star-half.svg') no-repeat;
+}
+.star.full{
+    background: url('../img/star-full.svg') no-repeat;
+}
+
+.point{
+    color:#fff;
+    font-size: 25px;
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 30px;
+}
+
+.submitGrade{
+    background: var(--background-color);
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    font-size: 14px;
+    height: 50px;
+    margin-left: 20px;
+}
+
+.submitGrade:hover{
+    background: var(--puple-color);
+    
+}
+
+.submitLike{
+    background: var(--background-color);
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    font-size: 14px;
+    height: 50px;
+    margin-left: 20px;
+}
+.submitLike:hover{
+    background: var(--puple-color);
+}
+/*리뷰 요소들 */ 
+
+.reviewInput{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+#reviewText{
+    width: 800px;
+}
+
+.reviewBtn {
+    background: var(--background-color);
+    color:#fff;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    font-size: 14px;
+}
+.reviewBtn:hover{ 
+    background: var(--puple-color);
+}
+
+.sort_container{
+    display:inline;
+    margin-left: 20px;
+}
+
+.reviewList{
+    padding: 20px;
+    justify-content: center;
+    margin-top: 60px;
+    margin-left: 80px;
+}
+
+.reviewList div{
+    justify-content: center;
+    width: 900px;
+    border: 1px solid var(--green-color);
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 20px;
+}
