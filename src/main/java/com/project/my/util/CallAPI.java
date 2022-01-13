@@ -116,8 +116,10 @@ public class CallAPI {
 		
 		try {
 			// URL 연결 객체 생성
-			URL url = new URL("http://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key="
-					 + kobis_key + "&listCount=30&releaseDts=" + tdate);	
+//			URL url = new URL("http://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key="
+//					 + kobis_key + "&listCount=30&releaseDts=" + tdate);
+			URL url = new URL("http://api.koreafilm.or.kr/openapi-data2/wisenut/search_api/search_json2.jsp?collection=kmdb_new2&ServiceKey="
+					+kmdb_key + "&listCount=30&releaseDts=" + tdate);
 			HttpURLConnection conn = (HttpURLConnection) url.openConnection();
 			
 			// GET방식으로 요청
@@ -153,9 +155,11 @@ public class CallAPI {
 			JSONObject jsonObject = (JSONObject) jsonParser.parse(result);
 			JSONArray jsonArray = (JSONArray) jsonObject.get("Data");
 			JSONObject obj = (JSONObject) jsonArray.get(0);
+			JSONArray arr = (JSONArray) obj.get("Result");
 			
 			for(int i=0; i<30; i++) {
-				String title = obj.get("title").toString();
+				JSONObject temp = (JSONObject) arr.get(i);
+				String title = temp.get("title").toString();
 				titlelist.add(title);
 			}
 		} catch (Exception e) {
