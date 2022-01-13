@@ -103,8 +103,7 @@ public class HomeController {
 		
 		return "genreView";
 	}
-	
-<<<<<<< HEAD
+
 	//임시 테스트 코드
 	
 	//영화상세보기
@@ -116,13 +115,12 @@ public class HomeController {
 	}
 	//마이페이지
 	
-		@RequestMapping(value = "/myPageView", method = RequestMethod.GET)
+		@RequestMapping(value = "/mypage/myinfo", method = RequestMethod.GET)
 		public String myPageView() throws Exception {
 			logger.info("get myPageView");
 			
 			return "myPageView";
 		}
-=======
 	// 검색결과 화면
 	@RequestMapping(value = "/searchView", method = RequestMethod.GET)
 	public String searchView(@RequestParam("search") String search, Model model) throws Exception {
@@ -134,5 +132,5 @@ public class HomeController {
 		
 		return "searchView";
 	}
->>>>>>> ef40dae8ff698db2ad92dd580543e4fc6324c39f
+
 }
